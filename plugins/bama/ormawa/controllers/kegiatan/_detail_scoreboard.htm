@@ -1,0 +1,42 @@
+<?php $data = $kegiatanUser?>
+<div class="scoreboard-item title-value">
+    <h4>ORMAWA</h4>
+    <p>
+        <?= e($data->user->first_name.' '.$data->user->last_name) ?>
+    </p>
+    <p class="description">
+        <!-- $bantuan->user->name) ?> -->
+    </p>
+</div>
+<div class="scoreboard-item title-value">
+    <h4>Nama Kegiatan</h4>
+    <p class="text-capitalize" ><?= $data->nama ?></p>
+    <!-- <p class="description">$bantuan['created_at']) ?></p> -->
+</div>
+<div class="scoreboard-item title-value">
+    <h4>Status Pengajuan</h4>
+    <p>
+        <?= $data->getStringStatus() ?>
+    </p>
+</div>
+
+<div class="scoreboard-item title-value">
+    <h4>Anggaran Diajukan</h4>
+    <p>
+       <?= $data->anggaran ? "Rp. " . number_format($data->anggaran,2,',','.') : "Empty" ?>
+    </p>
+    <p class="description">
+        <!-- e($bantuan->user->name) ?> -->
+    </p>
+</div>
+
+<div class="scoreboard-item title-value">
+    <h4>Anggaran Disetujui</h4>
+    <p>
+       <?= $data->anggaran_acc ? "Rp. " . number_format($data->anggaran_acc,2,',','.') : "Empty" ?>
+    </p>
+    <p class="description">
+        <!-- e($bantuan->user->name) ?> -->
+    </p>
+</div>
+

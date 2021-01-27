@@ -1,0 +1,11 @@
+laporan:
+    label: 'Laporan'
+    view:
+        form: $/bama/ormawa/models/laporan/fields.yaml
+        list: $/bama/ormawa/models/laporan/columns.yaml
+        toolbarButtons: add|create|update|remove
+    manage:
+        form: $/bama/ormawa/models/laporan/fields.yaml
+        list: $/bama/ormawa/models/laporan/columns.yaml
+        showSearch: true
+        recordsPerPage: 10

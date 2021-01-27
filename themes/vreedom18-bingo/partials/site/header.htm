@@ -1,0 +1,76 @@
+description = "Header Partial"
+==
+<!--
+Fixed Navigation
+==================================== -->
+<header class="navigation fixed-top">
+    <div class="container">
+        <!-- main nav -->
+        <nav class="navbar navbar-expand-lg navbar-light px-0">
+            <!-- logo -->
+            <a class="navbar-brand logo" href="{{ 'blog'|page }}">
+                <h2 class="text-white">BAMA</h2>
+                <!-- <img loading="lazy" class="logo-default" src="{{ 'assets/images/logo.png'|theme }}" alt="logo" /> -->
+                <!-- <img loading="lazy" class="logo-white" src="{{ 'assets/images/logo-white.png'|theme }}" alt="logo" /> -->
+            </a>
+            <!-- /logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav ml-auto text-center">
+                    <!-- <li class="nav-item dropdown {% if this.page.id == 'index' %}active{% elseif this.page.id == 'onepage-slider' %}active{% elseif this.page.id == 'onepage-text' %}active{% endif %}">
+                        <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Backend Area <i class="tf-ion-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ 'index'|page }}">Homepage</a></li>
+                            <li><a class="dropdown-item" href="{{ 'onepage-slider'|page }}">Onepage</a></li>
+                            <li><a class="dropdown-item" href="{{ 'onepage-text'|page }}">Onepage 2</a></li>
+
+                            <li class="dropdown dropdown-submenu dropright">
+                                <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu <i
+                                        class="tf-ion-chevron-down"></i></a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdown0501">
+                                    <li><a class="dropdown-item" href="{{ 'index'|page }}">Submenu 01</a></li>
+                                    <li><a class="dropdown-item" href="{{ 'index'|page }}">Submenu 02</a></li>
+                                </ul>
+                            </li>
+                        </ul> 
+                    </li>-->
+                    <li class="nav-item {% if this.page.id == 'about' %}active{% endif %}">
+                        <a class="nav-link" href="{{ url('admin') }}">Backend Area</a>
+                    </li>
+                    <li class="nav-item {% if this.page.id == 'about' %}active{% endif %}">
+                        <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    </li>
+                    <!-- <li class="nav-item {% if this.page.id == 'service' %}active{% endif %}">
+                        <a class="nav-link" href="{{ 'service'|page }}">Services</a>
+                    </li>
+                    <li class="nav-item {% if this.page.id == 'portfolio' %}active{% endif %}">
+                        <a class="nav-link" href="{{ 'portfolio'|page }}">Portfolio</a>
+                    </li>
+                    <li class="nav-item {% if this.page.id == 'team' %}active{% endif %}">
+                        <a class="nav-link" href="{{ 'team'|page }}">Team</a>
+                    </li>
+                    <li class="nav-item {% if this.page.id == 'pricing' %}active{% endif %}">
+                        <a class="nav-link" href="{{ 'pricing'|page }}">Pricing</a>
+                    </li>
+                    <li class="nav-item {% if this.page.id == 'contact' %}active{% endif %}">
+                        <a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
+                    </li> -->
+             
+                </ul>
+            </div>
+        </nav>
+        <!-- /main nav -->
+    </div>
+</header>
+<!--
+End Fixed Navigation
+==================================== -->

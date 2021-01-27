@@ -1,0 +1,25 @@
+columns:
+    nama:
+        label: 'nama kegiatan'
+        type: text
+    user_id:
+        label: ormawa
+        type: text
+        relation: user
+        valueFrom: name
+    anggaran:
+        label: anggaran
+        type: text
+    anggaran_acc:
+        label: 'anggaran disetujui'
+        type: number
+    status:
+        label: status
+        type: partial
+    created_at:
+        label: 'dibuat pada'
+        type: datetime
+    status_laporan:
+        label: 'laporan dilihat'
+        type: partial
+        relation: status_laporan

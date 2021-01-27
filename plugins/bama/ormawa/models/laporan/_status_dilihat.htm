@@ -1,0 +1,14 @@
+<?php
+if($this->user->hasAccess('bama.ormawa.access_users')){
+
+    $key = !$value ? 'Belum dilihat' : 'Telah dilihat';
+    $icon = !$value ? 'icon-certificate' : 'icon-check-circle';
+}else{
+    $icon = !$value ? 'icon-flag' : 'icon-check-circle';
+    $key = !$value ? 'Baru' : 'Telah dilihat';
+}
+$class = !$value ? 'warning' : 'success';
+?>
+<span class="<?= $icon ?> text-<?= $class ?>">
+    <?= e($key) ?>
+</span>

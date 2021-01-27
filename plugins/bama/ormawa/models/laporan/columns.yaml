@@ -1,0 +1,19 @@
+columns:
+    title:
+        label: title
+        type: text
+    kegiatan_id:
+        label: kegiatan
+        type: number
+        relation: kegiatan
+        valueFrom: nama
+    created_at:
+        label: dibuat
+        type: datetime
+    updated_at:
+        label: update
+        type: datetime
+    dilihat:
+        label: status
+        type: partial
+        path: $/bama/ormawa/models/laporan/_status_dilihat.htm

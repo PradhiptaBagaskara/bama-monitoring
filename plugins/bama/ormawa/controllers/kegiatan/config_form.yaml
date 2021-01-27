@@ -1,0 +1,10 @@
+name: Kegiatan
+form: $/bama/ormawa/models/kegiatan/fields.yaml
+modelClass: Bama\Ormawa\Models\Kegiatan
+defaultRedirect: bama/ormawa/kegiatan
+create:
+    redirect: 'bama/ormawa/kegiatan/update/:id'
+    redirectClose: bama/ormawa/kegiatan
+update:
+    redirect: bama/ormawa/kegiatan
+    redirectClose: bama/ormawa/kegiatan

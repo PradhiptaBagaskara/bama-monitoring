@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: 'Judul Laporan'
+        type: text
+    created_at:
+        label: dibuat
+        type: datetime
+    updated_at:
+        label: update
+        type: datetime
+    dilihat:
+        label: 'status laporan'
+        type: partial
+        path: $/bama/ormawa/models/laporan/_status_dilihat.htm
+

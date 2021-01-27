@@ -1,0 +1,12 @@
+title = "Informasi"
+url = "/:page?"
+layout = "default"
+
+[blogPosts]
+postsPerPage = "6"
+postPage = "single_post"
+
+is_hidden = 0
+==
+{% partial 'site/sp-header' %}
+{% partial 'blog/post' posts=blogPosts.posts %}

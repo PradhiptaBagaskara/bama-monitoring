@@ -1,0 +1,14 @@
+<?php
+if ($value->count() > 0 ): 
+    $icon = 'icon-flag';
+    $class = 'success';
+    $key = $value->count()." Laporan belum dilihat";
+else: 
+    $icon = 'icon-check-circle'; 
+    $class = 'warning';
+    $key = "Belum ada laporan baru"; 
+endif;
+?>
+<span class="<?= $icon ?> text-<?= $class ?>">
+    <?= e($key) ?>
+</span>

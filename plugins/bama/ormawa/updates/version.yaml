@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table bama_ormawa_kegiatan'
+    - builder_table_create_bama_ormawa_kegiatan.php
+1.0.3:
+    - 'Created table bama_ormawa_laporan'
+    - builder_table_create_bama_ormawa_laporan.php
+1.0.4:
+    - 'Updated table bama_ormawa_kegiatan'
+    - builder_table_update_bama_ormawa_kegiatan.php
+1.0.5:
+    - 'Updated table bama_ormawa_laporan'
+    - builder_table_update_bama_ormawa_laporan.php

@@ -1,0 +1,16 @@
+<?php
+if ($value == 0): 
+    $icon = 'icon-flag';
+    $class = 'warning';
+elseif($value == 1): 
+    $icon = 'icon-check-circle'; 
+    $class = 'success';
+else:  
+    $icon = 'icon-window-close';
+    $class = 'danger';
+endif;
+$key = $record->getStringStatus(); 
+?>
+<span class="<?= $icon ?> text-<?= $class ?>">
+    <?= e($key) ?>
+</span>

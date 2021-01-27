@@ -1,0 +1,34 @@
+title = "Baca Single"
+url = "/post/:slug?"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+
+[blogPosts]
+postsPerPage = "5"
+postPage = "single_post"
+
+[blogCategories]
+categoryPage = "single_post"
+
+==
+<?php
+function onEnd() {
+
+    // get the post component
+    $_post = $this->components['blogPost'];
+    $_post = $_post->post; // post is the alias of my component
+
+    // get the title
+    $_title = $_post->title;
+
+    // update the page title
+    $this->page->title = $_title;
+
+}
+?>
+==
+
+{% partial 'site/sp-header' %}
+{% partial 'blog/post-detail' post=blogPost.post posts=blogPosts.posts categories=blogCategories %}

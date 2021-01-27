@@ -1,0 +1,105 @@
+description = "Post Detail Partial"
+
+[viewBag]
+==
+<section class="blog-details section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <article class="post">
+                    <div class="post-image mb-5">
+                        {% if post.featured_images.count %}
+                        {% set image = post.featured_images.first %}
+                        <img loading="lazy" data-src="{{ image.filename }}" src="{{ image.path }}"
+                            alt="{{ image.description }}" style="max-width: 100%" class="img-fluid  w-100" />
+                        {% else %}
+                        <img loading="lazy" src="{{ 'assets/images/blog/post-1.jpg'|theme }}"
+                            alt="amazing caves coverimage" class="img-fluid  w-100">
+                        {% endif %}
+                    </div>
+                    <!-- Post Content -->
+                    <div class="post-content">
+                        <h3>{{post.title}}.</h3>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="{{ 'index'|page }}">{{post.user.first_name ~' '~ post.user.last_name}}</a>&nbsp;
+                            </li>
+                         
+                        </ul>
+                        {{ post.content_html | raw }}
+                        <!-- post share -->
+                        <ul class="post-content-share list-inline mb-5">
+                            <li class="list-inline-item">
+                                <a href="https://themefisher.com/">
+                                    <i class="tf-ion-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://themefisher.com/">
+                                    <i class="tf-ion-social-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://themefisher.com/">
+                                    <i class="tf-ion-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://themefisher.com/">
+                                    <i class="tf-ion-social-skype"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                   
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <!-- sidebar -->
+                <aside class="sidebar pl-0 pl-lg-4">
+                    <!-- <div class="widget-search widget">
+                        <form action="#">
+                            <input class="form-control shadow-none" type="text" placeholder="Search..." name="search">
+                            <button type="submit" class="widget-search-btn">
+                                <i class="tf-ion-ios-search"></i>
+                            </button>
+                        </form>
+                    </div> -->
+                
+                    <div class="widget-post widget">
+                        <h2>Informasi Terbaru</h2>
+                        <!-- latest post -->
+                        <ul class="widget-post-list">
+                            
+                            {% for last in posts %}
+                            <li class="widget-post-list-item">
+                                <div class="widget-post-image">
+                                    <a href="{{ last.url }}">
+                                        {% if last.featured_images.count %}
+                                        {% set image = last.featured_images.first %}
+                                        <img loading="lazy" data-src="{{ image.filename }}" src="{{ image.path }}"
+                                            alt="{{ image.description }}"/>
+                                        {% else %}
+                                            <img loading="lazy" src="{{ 'assets/images/blog/post-1.jpg'|theme }}" alt="post-img">
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                <div class="widget-post-content">
+                                    <a href="{{ last.url }}">
+                                        <h5>{{last.title}}</h5>
+                                    </a>
+                                    <h6>{{last.published_at | date('d M Y')}}</h6>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li>{{ blogPost.noPostsMessage }}</li>
+                            {% endfor %}
+                  
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>

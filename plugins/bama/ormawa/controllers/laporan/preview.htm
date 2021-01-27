@@ -1,0 +1,28 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('bama/ormawa/laporan') ?>">Laporan</a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <div class="form-preview">
+        <?= $this->formRenderPreview() ?>
+    </div>
+
+<?php else: ?>
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+<?php endif ?>
+
+<p>
+    <a href="<?= \Url::previous() ?>" class="btn btn-default oc-icon-chevron-left">
+        Kembali
+    </a>
+    <?php if($this->user->hasAccess('bama.ormawa.access_users')):?>
+
+    <a href="<?= Backend::url('bama/ormawa/laporan/update/'.$this->params[0]) ?>" class="btn btn-danger oc-icon-edit">
+        Edit
+    </a>
+    <?php endif ?>
+</p>

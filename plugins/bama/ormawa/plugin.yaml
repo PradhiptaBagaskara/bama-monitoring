@@ -1,0 +1,20 @@
+plugin:
+    name: 'bama.ormawa::lang.plugin.name'
+    description: 'bama.ormawa::lang.plugin.description'
+    author: BAMA
+    icon: oc-icon-asterisk
+    homepage: ''
+navigation:
+    ormawa:
+        label: 'bama.ormawa::lang.plugin.name'
+        url: bama/ormawa/kegiatan
+        icon: icon-users
+        sideMenu:
+            kegiatan:
+                label: Kegiatan
+                url: bama/ormawa/kegiatan
+                icon: icon-paste
+            laporan:
+                label: Laporan
+                url: bama/ormawa/laporan
+                icon: icon-book

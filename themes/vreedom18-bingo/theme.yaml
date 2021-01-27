@@ -1,0 +1,7 @@
+name: Bingo
+description: 'BINGO is a powerful Bootstrap Business Template from the Themefisher team.'
+author: Themefisher
+homepage: 'https://themefisher.com'
+code: bingo
+form: config/fields.yaml
+

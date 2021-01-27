@@ -1,0 +1,31 @@
+tabs:
+  fields:
+    ### General
+    # Website Details
+    general_settings_section:
+      tab: General
+      label: Website Details
+      type: section
+    site__title:
+      tab: General
+      label: Title
+      type: text
+      span: left
+      default: Bingo 
+      comment: Used at site title
+    site__description:
+      tab: General
+      label: Description
+      type: text
+      span: right
+      default: My new websites
+      comment: Used at site description
+    fields:
+        site_name:
+            label: Site name
+            comment: The website name as it should appear on the front-end
+            default: "AdminLTE 2.4"
+        login_title:
+            label: Login form title
+            default: "<b>Admin</b>LTE 2.4"
+

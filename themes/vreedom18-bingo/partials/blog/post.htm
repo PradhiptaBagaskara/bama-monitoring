@@ -1,0 +1,79 @@
+description = "Post Partial"
+
+[viewBag]
+==
+<section class="posts section">
+    <div class="container">
+        <div class="row">
+            <!-- /section title -->
+            {% for post in posts %}
+
+            <!-- single blog post -->
+            <article class="col-lg-4 col-md-6">
+                <div class="post-item">
+                    <div class="media-wrapper">
+                        {% if post.featured_images.count %}
+                        {% set image = post.featured_images.first %}
+                        <img loading="lazy" data-src="{{ image.filename }}" src="{{ image.path }}"
+                            alt="{{ image.description }}" style="max-width: 100%" class="img-fluid" />
+                        {% else %}
+                        <img loading="lazy" src="{{ 'assets/images/blog/post-1.jpg'|theme }}"
+                            alt="amazing caves coverimage" class="img-fluid">
+                        {% endif %}
+                    </div>
+
+                    <div class="content">
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p>
+                            {{ post.summary | raw }}
+                        </p>
+                        <a class="btn btn-main" href="{{ post.url }}">Read more</a>
+                    </div>
+                </div>
+            </article>
+            {% else %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center">
+                        <article class="no-data">{{ blogPost.noPostsMessage }}</article>
+                    </div>
+                </div>
+            </div>
+            <!-- /single blog post -->
+            {% endfor %}
+
+
+
+        </div>
+        {% if posts.lastPage > 1 %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <ul class="pagination">
+                        {% if posts.currentPage > 1 %}
+                        <li class="page-item"><a class="page-link"
+                                href="{{ this.page.baseFileName | page({ (__SELF__.pageParam): (posts.currentPage-1) }) }}">&larr;
+                                Previous</a></li>
+                        {% endif %}
+
+                        {% for page in 1..posts.lastPage %}
+                        <li class="page-item" cl class="page-link"
+                            ass="{{ posts.currentPage == page ? 'active' : null }}">
+                            <a href="{{ this.page.baseFileName | page({ (__SELF__.pageParam): page }) }}">{{ page }}</a>
+                        </li>
+                        {% endfor %}
+
+                        {% if posts.lastPage > posts.currentPage %}
+                        <li class="page-item"><a class="page-link"
+                                href="{{ this.page.baseFileName | page({ (__SELF__.pageParam): (posts.currentPage+1) }) }}">Next
+                                &rarr;</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>

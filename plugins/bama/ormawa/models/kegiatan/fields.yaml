@@ -1,0 +1,68 @@
+fields:
+    status:
+        label: 'Ganti Status'
+        options:
+            - Review
+            - Diterima
+            - Ditolak
+        showSearch: true
+        span: auto
+        type: dropdown
+    file:
+        label: 'Proposal Pengajuan'
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    anggaran:
+        label: Anggaran
+        span: auto
+        default: 0
+        type: number
+        comment: 'Tulis anggaran yang ingin diajukan'
+    anggaran_acc:
+        label: 'Anggaran diterima'
+        span: auto
+        default: 0
+        type: number
+        comment: 'Tulis anggaran yang di setujui'
+    nama:
+        label: 'Nama Kegiatan'
+        span: full
+        type: text
+    deskripsi:
+        label: 'Deskripsi Kegiatan'
+        size: small
+        span: full
+        type: richeditor
+    reason:
+        label: Catatan
+        size: small
+        span: full
+        type: richeditor
+tabs:
+    fields:
+        new_laporan:
+            span: auto
+            path: $/bama/ormawa/controllers/kegiatan/new_laporan_btn.htm
+            type: partial
+            context: update
+            tab: Laporan
+        Laporan@update:
+            span: full
+            path: $/bama/ormawa/controllers/kegiatan/_laporan.htm
+            type: partial
+            tab: Laporan
+        reason_preview:
+            span: full
+            path: $/bama/ormawa/models/kegiatan/_catatan.htm
+            type: partial
+            tab: 'Catatan BAMA'
+        deskripsi_preview:
+            span: full
+            path: $/bama/ormawa/models/kegiatan/_descripsi.htm
+            type: partial
+            tab: Deskripsi

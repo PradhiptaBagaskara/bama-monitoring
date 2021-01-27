@@ -1,0 +1,25 @@
+fields:
+    title:
+        label: 'Judul Laporan'
+        span: full
+        type: text
+    kegiatan_option:
+        label: Kegiatan
+        nameFrom: nama
+        descriptionFrom: description
+        span: auto
+        type: relation
+    description:
+        label: 'Deskripsi Laporan'
+        size: small
+        span: full
+        type: richeditor
+    file:
+        label: 'Upload Laporan'
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

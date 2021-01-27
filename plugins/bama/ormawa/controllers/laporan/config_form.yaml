@@ -1,0 +1,10 @@
+name: Laporan
+form: $/bama/ormawa/models/laporan/fields.yaml
+modelClass: Bama\Ormawa\Models\Laporan
+defaultRedirect: bama/ormawa/laporan
+create:
+    redirect: 'bama/ormawa/laporan/update/:id'
+    redirectClose: bama/ormawa/laporan
+update:
+    redirect: bama/ormawa/laporan
+    redirectClose: bama/ormawa/laporan
