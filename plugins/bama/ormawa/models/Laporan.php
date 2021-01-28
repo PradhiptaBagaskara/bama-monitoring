@@ -26,7 +26,7 @@ class Laporan extends Model
     ];
     public $belongsTo = [
         'kegiatan' => Kegiatan::class,
-        'kegiatan_option' => [Kegiatan::class, 'conditions' => 'status = 1'],
+        'kegiatan_option' => [Kegiatan::class, 'conditions' => 'status = 1', 'key'=>'kegiatan_id'],
     ];
 
 

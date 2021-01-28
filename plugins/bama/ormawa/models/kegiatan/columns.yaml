@@ -6,7 +6,7 @@ columns:
         label: ormawa
         type: text
         relation: user
-        valueFrom: name
+        valueFrom: first_name
     anggaran:
         label: anggaran
         type: text
