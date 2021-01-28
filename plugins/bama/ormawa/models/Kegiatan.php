@@ -1,8 +1,9 @@
 <?php namespace Bama\Ormawa\Models;
 
 use Model;
-use RainLab\User\Models\User;
 use Bama\Ormawa\Models\Laporan;
+use BackendAuth;
+
 /**
  * Model
  */
@@ -59,4 +60,16 @@ class Kegiatan extends Model
             return 'DITOLAK';
         }
     }
+
+    public function beforeSave()
+    {
+        if (empty($this->user)) {
+            $user = BackendAuth::getUser();
+            if (!is_null($user)) {
+                $this->user_id = $user->id;
+            }
+        }
+    }
+
+
 }
